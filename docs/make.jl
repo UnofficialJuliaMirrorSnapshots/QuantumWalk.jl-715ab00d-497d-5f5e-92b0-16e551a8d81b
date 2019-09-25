@@ -10,12 +10,11 @@ cp(normpath(@__FILE__, "../../LICENSE.md"), normpath(@__FILE__, "../src/license.
 
 makedocs(
     modules     = [QuantumWalk],
-    format      = Documenter.HTML(),
+    format      = Documenter.HTML(assets = ["assets/logo.ico"]),
     sitename    = "QuantumWalk",
     clean       = true,
     doctest     = true,
     checkdocs   = :exports,
-    assets 	    = ["assets/logo.ico"],
     pages       = Any[
 		"Home"             => "index.md",
 		"Type hierarchies" => "type_hierarchy.md",
@@ -36,8 +35,8 @@ makedocs(
 deploydocs(
     deps        = nothing,
     make        = nothing,
-    repo        = "github.com/QuantumWalks/QuantumWalk.jl",
-    target      = "build"
+    repo        = "github.com/iitis/QuantumWalk.jl",
+    target      = "build",
 )
 
 
